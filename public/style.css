@@ -225,13 +225,23 @@ i {
   font-size: 1rem;
   /* padding: 0 5px; */
 }
+.user-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.sign-out {
+/* .sign-out {
   float: right;
   position: absolute;
   left: 80%;
   font-size: 14px;
 }
+.home {
+  position: absolute;
+  left: 70%;
+  float: right;
+} */
 .sign-out i {
   font-size: 12px;
 }
