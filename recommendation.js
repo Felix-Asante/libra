@@ -68,7 +68,7 @@ router.get("/delete", async function (req, res) {
   const id = url.parse(req.url, true).query.query;
   try {
     const del = await recommend.deleteOne({ _id: id });
-    res.redirect("/");
+    res.redirect("/recommend/books");
     console.log(del);
   } catch {
     console.log("Fail to delete");

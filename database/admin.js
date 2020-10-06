@@ -15,6 +15,7 @@ const admin = new Schema({
     required: true,
   },
 });
+
 // mongoose.Promise = global.Promise;
 admin.pre("save", async function (next) {
   try {

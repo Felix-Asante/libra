@@ -31,6 +31,7 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
+// index page
 app.get("/", async function (req, res) {
   const bookList = await bookCollection.find().limit(10);
   // console.log(bookList);
@@ -52,7 +53,9 @@ app.listen(PORT, () => {
 
 app.post("/research", async function (req, res) {
   // console.l
-  const results = await bookCollection.find({ nomDuLivre: req.body.search });
+  const results = await bookCollection.find({
+    $text: { $search: req.body.search },
+  });
   res.render("home", {
     layouts: false,
     results: results,

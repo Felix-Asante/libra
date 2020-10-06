@@ -1,0 +1,61 @@
+@media screen and (max-width: 500px) {
+  .showcase .container .showcase-content h1 {
+    font-size: 2rem;
+  }
+  .search-bars form input[type="submit"] {
+    width: 30%;
+  }
+  .book-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .newBook {
+    width: 380px;
+  }
+
+  /* admin page style */
+  .admin-container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  .admin-container .company-name {
+    grid-column: 2 / span 3;
+    height: 30px;
+    writing-mode: horizontal-tb;
+  }
+  .admin-container .header {
+    grid-column: 2 / span 3;
+  }
+  .admin-container .table,
+  .mx-auto {
+    grid-column: 2 / span 3;
+    /* width: 90%; */
+    padding: 0 5px;
+  }
+
+  .admin-container .table thead th,
+  .admin-container .table tbody td {
+    padding-right: 0;
+  }
+  .details {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+  .sign-out {
+    margin-bottom: 10px;
+  }
+
+  /* Recommend page */
+  #reco-table th,
+  #reco-table td,
+  #reco-table td i {
+    padding: 0;
+    font-size: 9px;
+  }
+  .p-xy {
+    padding: 16px;
+  }
+  #book-table * {
+    padding: 0;
+    font-size: 12px;
+  }
+}

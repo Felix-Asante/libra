@@ -37,6 +37,8 @@ const newBook = new Schema({
   },
 });
 // mongoose.Promise = global.Promise;
+// $text index query
+newBook.index({ "$**": "text" });
 
 newBook.virtual("coverImagePath").get(function () {
   if (this.coverImage != null && this.coverImageType != null) {
