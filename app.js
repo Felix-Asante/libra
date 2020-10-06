@@ -16,7 +16,7 @@ const admindb = require("./database/admin.js");
 const recommendRoutes = require("./recommendation.js");
 const NewRecommendation = require("./database/recommended.js");
 
-const PORT = 8000 || process.env.PORT;
+const PORT = process.env.PORT || 8000;
 app.use(express.static(path.join(__dirname, "public")));
 
 // app.use(bodyParser.urlencoded({ extended: false }));
