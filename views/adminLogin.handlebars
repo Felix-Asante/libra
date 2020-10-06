@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libra | New Admin </title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+
+
+<body class="newbook">
+    <section class="newBook">
+        <h1>Admin Login</h1>
+        <form action="/users" method="POST">
+
+            <p class="signal {{output}}" data-type="success" data-timeout="8000">{{message}}</p>
+            <div class="Admin-name">
+                <input type="text" name="name" id="bookname" class="admin" placeholder="User Name">
+            </div>
+            <div class="Access-code">
+                <input type="password" name="code" id="code" class="admin" placeholder="Access Code">
+            </div>
+
+            <div id="submit">
+                <input type="submit" value="ADD USER" class="submit">
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>

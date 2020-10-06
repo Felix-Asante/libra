@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libra | NewBook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="newbook">
+    <section class="newBook">
+        <h1>NEW BOOK</h1>
+        <form action="/newbook" method="POST">
+            <div class="book-name">
+                <input type="text" name="name" id="bookname" class="book" placeholder="Book Name">
+            </div>
+            <div class="author-name">
+                <input type="text" name="author" id="author" class="book" placeholder="Author">
+            </div>
+            <div class="book-year">
+                <input type="date" name="Annee" id="Annee" class="book" placeholder="Published Date">
+            </div>
+            <div class="link">
+                <input type="text" name="link" id="link" class="book" placeholder="Link to book">
+            </div>
+            <div class="files">
+                <input type="file" name="photo" id="photo" class="filepond">
+            </div>
+            <select name="categories" id="categories">
+                <option value="Programming">Programming</option>
+                <option value="History">History</option>
+                <option value="Fiction">Fiction</option>
+                <option value="Personal Development">Personal Development</option>
+                <option value="Adults">Adults</option>
+            </select>
+            <div class="description">
+                <textarea name="comment" id="comment" placeholder="Add description.."></textarea>
+            </div>
+            <div id="submit">
+                <input type="submit" value="ADD BOOK" class="submit">
+            </div>
+            <a href="/users/xyzadmin" class="car-color">Back to Dashboard</a>
+
+        </form>
+    </section>
+</body>
+
+</html>

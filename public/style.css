@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+a {
+  text-decoration: none;
+  color: #ffff;
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: none;
+}
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 15px;
+  cursor: pointer;
+}
+
+.bg-primary {
+  background-color: #eb8c7a;
+  color: #ffff;
+}
+.bg-order {
+  background-color: var(--order);
+  color: white;
+}
+.car-color {
+  color: var(--cars);
+  text-align: center;
+  font-weight: 500;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+.top-header {
+  background-color: #301d10;
+  color: #ffff;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 2rem;
+  align-items: center;
+  margin-bottom: 1.6rem;
+}
+.top-header:first-child {
+  font-size: 1.5rem;
+}
+.top-header .btn {
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.showcase {
+  height: 70vh;
+  width: 100%;
+  background-image: url("./img/alfons-morales-YLSwjSy7stw-unsplash.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.reco {
+  height: 30vh;
+  margin-bottom: 1.5rem;
+}
+.showcase::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.showcase .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  z-index: 10;
+  color: #ffff;
+}
+.showcase .container .showcase-content {
+  z-index: 10;
+  text-align: center;
+}
+.showcase .container .showcase-content h1 {
+  font-size: 2.3rem;
+  text-transform: uppercase;
+}
+.showcase .container .showcase-content p {
+  padding-bottom: 2rem;
+}
+.showcase .container .showcase-content .btn {
+  font-weight: 700;
+}
+
+:root {
+  --header: #45a6e9;
+  --side-header: #1f1f1f;
+  --detail-bg: #f0f0f0;
+  --order: #efad4f;
+  --cust: #66b85b;
+  --cars: #da534f;
+}
+.cust-color {
+  color: var(--cust);
+}
+.bg-car {
+  background-color: var(--cars);
+  color: var(--detail-bg);
+}
+.adminPanel {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  height: 100vh;
+}
+.admin-container {
+  display: grid;
+  grid-template-columns: 1fr, 2fr, 2fr;
+  padding: 2rem;
+}
+.admin-container .header {
+  grid-column: 2 / span 3;
+  background: var(--header);
+  width: 100%;
+  height: 50px;
+}
+.admin-container .table,
+.mx-auto {
+  grid-column: 2 / span 3;
+  width: 100%;
+  padding: 0 4rem;
+}
+.mx-auto:hover {
+  color: var(--cust);
+}
+.admin-container .table i {
+  font-size: 12px;
+}
+.admin-container .table .cust-color i {
+  color: var(--cust);
+}
+.admin-container .table .car-color i {
+  color: var(--cars);
+}
+.admin-container .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 25px;
+}
+
+.admin-container .company-name {
+  grid-row: 1 / span 3;
+
+  background-color: var(--side-header);
+  color: white;
+  writing-mode: vertical-lr;
+  height: 300px;
+  font-weight: 500;
+  text-align: center;
+  /* padding: 2rem; */
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.panel-details {
+  width: 100%;
+  grid-column: 2 / span 3;
+  background-color: var(--detail-bg);
+  /* height: 300px; */
+  text-align: center;
+}
+.details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  /* display: flex; */
+  padding: 20px 15px;
+  background: white;
+  position: relative;
+}
+.details .detailFlex {
+  display: flex;
+  color: white;
+  padding: 15px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--order);
+  border-radius: 2px;
+  transition: all 0.4s ease-in-out;
+}
+.details .detailFlex:hover {
+  box-shadow: 1px 1px 5px gray;
+  cursor: pointer;
+}
+/* .details::after {
+  content: "";
+  background-color: var(--detail-bg);
+  height: 2px;
+  width: 97%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 15px;
+} */
+.Customers {
+  background-color: var(--cust) !important;
+}
+.Cars {
+  background-color: var(--cars) !important;
+}
+i {
+  color: white;
+  font-size: 2rem;
+  margin-left: 5px;
+}
+.admin-container .header i {
+  font-size: 1rem;
+  /* padding: 0 5px; */
+}
+
+.sign-out {
+  float: right;
+  position: absolute;
+  left: 80%;
+  font-size: 14px;
+}
+.sign-out i {
+  font-size: 12px;
+}
+
+/* ===========ADD NEW BOOOK ============== */
+/* add new book */
+.newbook {
+  background: var(--header);
+  height: 100vh;
+}
+.newBook {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  width: 500px;
+}
+.newBook h1 {
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 12px;
+}
+form {
+  padding: 2rem;
+}
+input,
+textarea,
+select {
+  outline: none;
+  border: 1px solid var(--detail-bg);
+
+  padding: 12px;
+  border-radius: 4px;
+  /* display: flex; */
+  margin-bottom: 10px;
+  width: 100%;
+  display: block;
+}
+.files input {
+  border: none;
+  width: 50%;
+}
+.submit {
+  background: var(--order);
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: 700;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+/* ======== HOME PAGE BOOK LAYOUT ========= */
+/* books layout */
+.books {
+  padding: 1.5rem 4rem;
+}
+.book-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 1rem;
+}
+.book-container .btn {
+  padding: 4px;
+  display: block;
+  text-align: center;
+}
+.book-container * {
+  font-size: 12px;
+}
+#book {
+  height: 230px;
+}
+#book:hover {
+  box-shadow: 1px 1px 15px rgb(161, 160, 160);
+}
+#book img {
+  width: 100%;
+}
+#book .btn {
+  width: 90%;
+  display: block;
+  margin: 5px;
+}
+/* NEW ADMIN */
+.signal {
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  display: block;
+}
+.success {
+  background-color: var(--cust);
+  color: white;
+}
+.fail {
+  background-color: var(--cars);
+  color: white;
+}
+
+/* Reaserch Filters */
+.researche {
+  margin-bottom: 1.4rem;
+  display: block;
+  background-color: var(--detail-bg);
+}
+.search-bars form {
+  display: flex;
+  justify-content: center;
+}
+.search-bars form input {
+  outline: none;
+  border: 1px solid var(--detail-bg);
+
+  padding: 10px;
+  border-radius: 4px 0 0 4px;
+  /* display: flex; */
+  margin-bottom: 10px;
+  width: 50%;
+  display: block;
+}
+.search-bars form input[type="submit"] {
+  width: 15%;
+  background-color: var(--cars);
+  color: white;
+  font-weight: 500;
+  border-radius: 0 4px 0 4px;
+}
+
+.fsmall {
+  font-size: 14px;
+  font-weight: 500;
+}
+.fmed {
+  font-size: 16px;
+}
+.text-sm-right {
+  padding-left: 2rem;
+}
+.p-xy {
+  padding-left: 10rem;
+}
+.text-sm-right:hover {
+  text-decoration: none;
+  color: var(--cust);
+}

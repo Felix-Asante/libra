@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libra | NewBook</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+{{!-- <script src="/fileUpload.js"></script> --}}
+
+<body class="newbook">
+    <section class="newBook">
+        <form action="/users/update" method="POST">
+            {{#each book}}
+            <div class="book-name">
+                <input type="text" name="name" id="bookname" class="book" value="{{this.nomDuLivre}}">
+            </div>
+            <div class="author-name">
+                <input type="text" name="author" id="author" class="book" value="{{this.nomDuAuteur}}">
+            </div>
+            <div class="book-year">
+                <input type="date" name="Annee" id="Annee" class="book" value="{{this.annee}}">
+            </div>
+            <div class="link">
+                <input type="text" name="link" id="link" class="book" value="{{this.link}}">
+            </div>
+            <div class="files">
+                <input type="file" name="photo" id="photo" class="filepond">
+            </div>
+            <select name="categories" id="categories">
+                <option value="Programming">Programming</option>
+                <option value="History">History</option>
+                <option value="Fiction">Fiction</option>
+                <option value="Personal Development">Personal Development</option>
+                <option value="Adults">Adults</option>
+            </select>
+            <div class="description">
+                <textarea name="comment" id="comment">{{this.description}}</textarea>
+            </div>
+            {{/each}}
+            <div id="submit">
+                <input type="submit" value="UPDATE" class="submit">
+            </div>
+            <a href="/users/xyzadmin" class="car-color">Back to Dashboard</a>
+
+        </form>
+    </section>
+</body>
+
+</html>

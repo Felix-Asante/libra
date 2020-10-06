@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Libra Online</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+  <header class="top-header">
+    <a href="">lIBRA</a>
+    <a href="recommend" class="btn bg-primary">Recommend a Book</a>
+    <a href="/users/">Login</a>
+
+  </header>
+  <section class="showcase">
+    <div class="container">
+      <div class="showcase-content">
+        <h1>Online book Library</h1>
+        <p>Perfect place to get all your studies resources</p>
+        <a href="#getbook" class="btn bg-primary">GET YOUR EBOOK</a>
+      </div>
+    </div>
+
+  </section>
+  <section class="researche">
+    <div class="search-bars">
+      <form action="/research" method="POST">
+        <input type="search" name="search" id="search" placeholder="Researche">
+        <input type="submit" value="Researche">
+      </form>
+    </div>
+  </section>
+  <div class="books" id="getbook">
+    <div class="book-container">
+      {{#each bookList}}
+      <div id="book">
+        <img height="150" width="100" src="{{this.coverImagePath}}">
+        <h5>{{this.nomDuLivre}} </h5>
+        <a href="{{this.link}}" class="btn bg-primary" target="_blank">Read Book</a>
+      </div>
+      {{/each}}
+    </div>
+
+
+  </div>
+  <div class="books" id="getbook">
+    <div class="book-container">
+      {{#each results}}
+      <div id="book">
+        <img height="150" width="100" src="{{this.coverImagePath}}">
+        <h5>{{this.nomDuLivre}} </h5>
+        <a href="{{this.link}}" class="btn bg-primary" target="_blank">Read Book</a>
+      </div>
+      {{/each}}
+      <a href="{{state}}" class="btn car-color">{{content}}</a>
+    </div>
+
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libra | Admin</title>
+    <script src="https://kit.fontawesome.com/fc494360f4.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Boostrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div id="adminPanel">
+        <a href="/users/out" class="car-color sign-out">SignOut<i class="fas fa-sign-out-alt"></i></a>
+        <div class="admin-container">
+
+            <div class="header">
+                <a href="/users/newuser" class="btn bg-order">Add User<i class="fas fa-plus"></i></a>
+                {{!-- <form action="/newAdmin" method="GET">
+                    <button class="btn bg-order" type="submit"> Add User<i class="fas fa-plus"></i></button>
+                </form> --}}
+                <form action="/add" method="GET">
+                    <button type="submit" class="btn bg-car">New Book<i class="fas fa-plus"></i></button>
+                </form>
+            </div>
+            <div class="company-name">Libra</div>
+            <div class="panel-details">
+                <div id="details">
+                    <div class="details">
+                        <div class="orders detailFlex px">
+                            <i class="fas fa-book-reader"></i>
+                            <div class="numLivre">
+                                <div class="h4">No. Livre</div>
+                                <h5>{{this.count}}</h5>
+                            </div>
+                        </div>
+                        <div class="Customers detailFlex px">
+                            <i class="fas fa-users"></i>
+                            <a href="/recommend/books">
+                                <div class="recommend">
+                                    <div class="h4">Recommended</div>
+                                    <h5>{{this.counter}}</h5>
+                                </div>
+                            </a>
+
+
+                        </div>
+
+                    </div>
+                    {{!-- <hr> --}}
+                </div>
+            </div>
+            <table class="table table-sm table-responsive table-hover">
+                <thead>
+                    <tr>
+                        <th class="pr-5" scope="col">Img</th>
+                        <th class="pr-5" scope="col">Title</th>
+                        <th class="pr-5" scope="col">Author</th>
+                        <th scope="col"></th>
+                        <th class="pr-5" scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each books}}
+                    <tr>
+                        {{!-- class="col px-md-1" --}}
+                        {{!-- <th scope="row">1</th> --}}
+                        <td class="pr-5"><img height="40" width="30" src="{{this.coverImagePath}}"></td>
+                        <td class="pr-5">{{this.nomDuLivre}}</td>
+                        <td class="pr-5">{{this.nomDuAuteur}}</td>
+                        <td><a href="update?query={{this._id}}" class=" cust-color"><i
+                                    class="fas fa-pencil-alt"></i></a>
+                        </td>
+                        <td class="pr-5"><a href="delete?query={{this._id}}" class=" car-color"><i
+                                    class="fas fa-trash-alt"></i></a></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+
+            </table>
+            <a href="/users/books" class="cust-color mx-auto">View All books</a>
+        </div>
+
+    </div>
+</body>
+
+</html>

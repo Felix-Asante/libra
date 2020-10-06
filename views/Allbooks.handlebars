@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Libra Online</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/fc494360f4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style.css" />
+
+</head>
+
+<body>
+
+    <section class="reco showcase">
+        <div class="container">
+            <div class="showcase-content">
+                <h1>Books Store</h1>
+            </div>
+        </div>
+
+    </section>
+    <table class="table table-sm p-xy table-responsive table-hover">
+        <thead>
+            <tr>
+                <th class="pr-5" scope="col">Img</th>
+                <th class="pr-5" scope="col">Title</th>
+                <th class="pr-5" scope="col">Author</th>
+                <th scope="col"></th>
+                <th class="pr-5" scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each books}}
+            <tr>
+                {{!-- class="col px-md-1" --}}
+                {{!-- <th scope="row">1</th> --}}
+                <td class="pr-5"><img height="40" width="30" src="{{this.coverImagePath}}"></td>
+                <td class="pr-5">{{this.nomDuLivre}}</td>
+                <td class="pr-5">{{this.nomDuAuteur}}</td>
+                <td><a href="update?query={{this._id}}" class=" cust-color"><i
+                            class="fas fa-pencil-alt cust-color fmed"></i></a></td>
+                <td class="pr-5"><a href="delete?query={{this._id}}" class=" car-color"><i
+                            class="fas fa-trash-alt car-color fsmall"></i></a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+
+    </table>
+    <a href="/users/xyzadmin" class="text-sm-right p-xy cust-color ">
+        Back to Dashboard
+    </a>
+
+    </div>
+
+</body>
+
+</html>

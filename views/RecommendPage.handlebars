@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Libra Online</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/fc494360f4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style.css" />
+
+</head>
+
+<body>
+
+    <section class="reco showcase">
+        <div class="container">
+            <div class="showcase-content">
+                <h1>Recommended Books</h1>
+            </div>
+        </div>
+
+    </section>
+    <table class="table pr-5 pl-5 table-sm table-responsive table-hover">
+        <thead>
+            <tr>
+                <th class="pr-5" scope="col">User</th>
+                <th class="pr-5" scope="col">Book Title</th>
+                <th class="pr-5" scope="col">Author</th>
+                <th class="pr-5" scope="col">Category</th>
+                <th class="pr-5" scope="col"></th>
+                <th class="pr-5" scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each books}}
+            <tr>
+                <td class="pr-5">{{this.userName}}</td>
+                <td class="pr-5">{{this.bookTitle}}</td>
+                <td class="pr-5">{{this.Author}}</td>
+                <td class="pr-5">{{this.category}}</td>
+                <td class="pr-5"><a href="delete?query={{this._id}}" class="car-color"><i
+                            class="fas fa-trash-alt car-color fsmall"></i></a></td>
+                <td class="pr-5"></td>
+
+            </tr>
+            {{/each}}
+        </tbody>
+
+    </table>
+    <a href="/users/xyzadmin" class="text-sm-right cust-color ">
+        Back to Dashboard
+    </a>
+
+    </div>
+
+</body>
+
+</html>

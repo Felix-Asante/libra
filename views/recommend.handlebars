@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libra | New Admin </title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+
+
+<body class="newbook">
+    <section class="newBook">
+        <form action="/recommend" method="POST">
+            <p class="signal {{output}}" data-type="success" data-timeout="8000">{{message}}</p>
+            <div class="user-name">
+                <input type="text" name="name" id="recommemnd" class="recommend" placeholder=" Name">
+            </div>
+            <div class="email">
+                <input type="email" name="email" id="email" class="recommend" placeholder="Email">
+            </div>
+
+            <div class="bookName">
+                <input type="text" name="bookname" id="role" class="recommend" placeholder="Book Title">
+            </div>
+            <div class="author">
+                <input type="text" name="author" id="role" class="recommend" placeholder="Author">
+            </div>
+            <select name="categories" id="categories">
+                <option value="Programming">Programming</option>
+                <option value="History">History</option>
+                <option value="Fiction">Fiction</option>
+                <option value="Personal Development">Personal Development</option>
+                <option value="Adults">Adults</option>
+            </select>
+
+            <div id="submit">
+                <input type="submit" value="RECOMMEND" class="submit">
+            </div>
+            <a href="/" class="car-color">Back to Home</a>
+        </form>
+    </section>
+</body>
+
+</html>
